@@ -41,12 +41,12 @@ def main(args):
     for password in args:
         count = send_APIHash(password)
         if count:
-            print(f'{password} is found {count} times. See if you want to change it')
+            print(f'{password} is found {count} times. So better to change it')
         else: 
             print(f'{password} not found. Carry on!')
 
-
-main(sys.argv[1:])
+if __name__ == '__main__':
+    sys.exit(main(sys.argv[1:]))  #sys.exit - is used to exit out of this file. 
 
 
 
